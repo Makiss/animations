@@ -1,0 +1,75 @@
+.modal-login {
+	position: fixed;
+	z-index: 11;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -9999px);
+	box-shadow: 2px 2px 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal-login-shown {
+	transform: translate(-50%, -50%);
+	animation-name: bounce;
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes bounce {
+	25% {
+		transform: translate(-50%, 100%);
+	}
+	50% {
+		transform: translate(-50%, -100%);
+	}
+	75% {
+		transform: translate(-50%, 50%);
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
+
+.error {
+	animation: shake;
+	animation-duration: 2s;
+}
+
+@keyframes shake {
+	15% {
+		transform: translate(75%, -50%);
+		box-shadow: 2px 2px 5px 6px rgba(255, 0, 0, 0.2);
+	}
+	30% {
+		transform: translate(-75%, -50%);
+	}
+	45% {
+		transform: translate(75%, -50%);
+	}
+	60% {
+		transform: translate(-75%, -50%);
+	}
+	75% {
+		transform: translate(75%, -50%);
+	}
+	90% {
+		transform: translate(-75%, -50%);
+	}
+	100% {
+		transform: translate(-50%, -50%);
+		box-shadow: 2px 2px 5px 6px rgba(0, 0, 0, 0.2);
+	}
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.overlay-shown {
+	display: block;
+}
